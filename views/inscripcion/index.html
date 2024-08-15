@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>INSCRIPCION</title>
+    
+</head>
+<body class="bg-slate-300">
+
+    
+    <div id="notificacion" class="fixed top-20 right-0 left-0">
+    
+    </div>
+
+
+    <div class="pt-16 h-screen flex max-w-7xl mx-auto justify-center items-center px-4">
+        <div class="hidden lg:flex px-56 w-2/3 h-5/6">
+            <img src="/images/music.svg" alt="imagen para registro">
+        </div>
+        <form id="form" class="flex flex-col gap-4 bg-indigo-400 p-4 rounded-lg text-md shadow-lg">
+            <div class="flex flex-col gap-2">
+
+                <!-- Input de nombre y apellido -->
+                <label for="name-input" class="font-bold text-zinc-900">
+                    Nombre y Apellido <span class="text-pink-500">*</span></label>
+                <input type="text"
+                 id="name-input" 
+                 name="name-input"
+                 autocomplete="off" 
+                 placeholder="nombre y apellido"
+                 class="rounded-lg p-1 bg-zinc-100 focus:outline-blue-300">
+                <p class="text-xs text-zinc-800">Tanto el nombre como el apellido deben comenzar con mayusculas</p>
+            </div>
+
+            <!-- Input de correo -->
+            <div class="flex flex-col gap-2">
+                <label for="correo-input" class="font-bold text-zinc-900">
+                    Correo <span class="text-pink-500">*</span></label>
+                <input
+                 type="email"
+                 id="email-input" 
+                 name="email-input"
+                 autocomplete="off" 
+                 placeholder="ejemplo@gmail.com"
+                 class="rounded-lg p-1 bg-zinc-100 focus:outline-blue-300">
+                <p class="text-xs text-zinc-800">El correo es requerido</p>
+            </div>
+
+                <!-- Input de telefono -->
+            <div class="flex flex-col gap-2">
+                <label for="telefono-input" class="font-bold text-zinc-900">
+                    Telefono <span class="text-pink-500">*</span></label>
+                <input
+                 type="number"
+                 id="telefono-input" 
+                 name="telefono-input"
+                 autocomplete="off" 
+                 class="rounded-lg p-1 bg-zinc-100 focus:outline-blue-300">
+            
+            </div>
+
+            <!-- Input de edad -->
+            <div class="flex flex-col gap-2">
+                <label for="edad-input" class="font-bold text-zinc-900">
+                    Edad <span class="text-pink-500">*</span></label>
+                <input
+                 type="number"
+                 id="edad-input" 
+                 name="edad-input"
+                 autocomplete="off" 
+                 class="rounded-lg p-1 bg-zinc-100 focus:outline-blue-300">
+                
+            </div>
+
+            <!-- Input de las categorias -->
+            <div class="flex flex-col gap-2">
+                <label for="categoria-input" class="font-bold text-zinc-900">
+                    Categorias a participar <span class="text-pink-500">*</span></label>
+                    <select id="categorias-select" class="rounded-lg p-1 bg-zinc-100 focus:outline-blue-300" >
+                        <option selected disabled value="">Selecciona la categoria</option>
+                        
+                    </select>
+                
+            </div>
+           
+            <button 
+            id="form-btn"
+            disabled
+            class="bg-teal-600 py-2 px-4 rounded-lg font-bold  hover:bg-teal-400 transition ease-in-out disabled:opacity-50"
+            >
+            Incribirse
+        </button>
+        
+        </form>
+    </div>
+
+    <script src="../components/nav.js"></script>
+  <script type="module" src="index.js"></script>
+ 
+  
+</body>
+</html>

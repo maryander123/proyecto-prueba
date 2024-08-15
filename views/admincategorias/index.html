@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin categorias</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="max-w-md w-full bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-3xl font-bold text-center mb-6 text-gray-800">CATEGORIAS</h1>
+        <div class="mb-4">
+            <input id="taskInput" type="text" class="w-full p-3 border border-gray-300 rounded mb-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Nombre de la categoria">
+            <input id="priceInput" type="number" class="w-full p-3 border border-gray-300 rounded mb-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Precio">
+            <button onclick="addTask()" class="w-full bg-blue-600 text-white p-3 rounded hover:bg-blue-700 transition duration-300">Agregar categoria</button>
+        </div>
+        <ul id="taskList" class="list-none space-y-2">
+            <!-- Las tareas se agregarán aquí -->
+        </ul>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
